@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-blog-seo",
+  "owner": { "name": "Hannachi Omar" },
+  "plugins": [
+    {
+      "name": "ecommerce-blog-seo",
+      "source": "./",
+      "description": "Write honest, well-structured e-commerce blog articles, structured to be found on Google and reused by AI assistants. Built for beginner store owners."
+    }
+  ]
+}

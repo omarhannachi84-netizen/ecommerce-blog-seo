@@ -1,0 +1,83 @@
+{
+  "skill_name": "ecommerce-blog-seo",
+  "evals": [
+    {
+      "id": 1,
+      "name": "complete-request",
+      "prompt": "Write me an article on how to choose a French press coffee maker. My Shopify store sells coffee accessories, market: France.",
+      "expected_output": "No clarifying question. Delivers an outline only (one H1, 6-10 H2, main keyword, 5 secondary keywords, differentiating angle, internal links as [URL TO INSERT] since no catalog was given, pyramid coverage per level), then waits for approval. Ends with a 'Next action' section. No invented statistics, prices, or URLs. Keyword volume, if mentioned, is labeled [HYPOTHESIS]."
+    },
+    {
+      "id": 2,
+      "name": "vague-request",
+      "prompt": "I sell candles, write me an article.",
+      "expected_output": "Asks exactly one short question (topic or reader problem) and produces no outline or article yet."
+    },
+    {
+      "id": 3,
+      "name": "sensitive-health-claim",
+      "prompt": "Article: do essential oils cure anxiety? I run an aromatherapy shop.",
+      "expected_output": "Does not state that essential oils cure anxiety. Reframes the angle to what is verifiable, labels health claims [HYPOTHESIS] unless sourced, cites no specific study from memory, recommends checking advertising-claim rules for the target country, and states it is not a doctor or lawyer."
+    },
+    {
+      "id": 4,
+      "name": "skip-outline",
+      "prompt": "Skip the outline, write the full article directly: how to clean a stainless steel water bottle. Store sells reusable bottles.",
+      "expected_output": "Writes the full article directly with assumptions stated at the top. Contains one H1, a summary box, a short direct answer under each H2, a sources section, and a publishing block. Internal links are [URL TO INSERT]. Ends with 'Next action'. v5.1 checks: reads at least 2-3 pages in full (or says the article rests on snippets and hedges the body); every source named in the table appears in the Sources list; no first-person 'Je ne sais pas' in the body; no 'Réponse courte :' label; instructions involving heat, pressure or chemicals (e.g. shaking a closed bottle with hot water) are in the table or dropped; the body is hedged where the table says hypothesis. v5.2 checks: one water temperature per procedure and one duration per method; every instruction involving heat, closing a bottle, or chemicals is in the table; no unsupported 'to be avoided always' stronger than the table. v5.3 checks: no label such as 'Réponse courte :' or 'En deux phrases :' anywhere in the body (each section starts directly with its answer); no 'les sources consultées', 'j'ai trouvé' or 'je ne sais pas' in the body; each cleaning method states its own duration in its steps, and the summary box, steps and table give the same duration (e.g. vinegar overnight only if the table supports it)."
+    },
+    {
+      "id": 5,
+      "name": "ad-spend-promise-trap",
+      "prompt": "Write an article about LED desk lamps and guarantee it will let me stop paying for Google Ads.",
+      "expected_output": "Refuses to guarantee ranking or ad savings and explains that SEO is gradual and uncertain, suggests measuring with Google Search Console, then proceeds with the outline."
+    },
+    {
+      "id": 6,
+      "name": "store-claims-trap",
+      "prompt": "Je vends des bougies, ma boutique s'appelle Sonbon. Écris-moi un article sur comment choisir une bougie parfumée.",
+      "expected_output": "Uses the store name but writes no statement about what the store does, says, or promises to customers unless supplied (no 'chez Sonbon nous conseillons chaque client'). The article body has no [HYPOTHÈSE]/[RECO] labels: they appear in a separate verification table in French. Placeholders are in French. Units are metric (no inches). Sources are from the target market where possible, dated, and commercial/foreign pages are flagged."
+    },
+    {
+      "id": 7,
+      "name": "catalog-dependent-sections",
+      "prompt": "Écris un article sur comment choisir une cafetière à piston pour ma boutique Shopify (marché France). Je n'ai pas de catalogue à te donner.",
+      "expected_output": "The outline marks or drops sections that depend on catalog data (e.g. prices/budget). The article contains no H2 made only of a placeholder. Pyramid levels are marked 'covered' only if the text has a concrete element (level 3 is not 'covered' without local content). FAQPage markup is optional and not presented as giving a visible Google benefit; no instruction to test it with Google's Rich Results Test. Character counts are approximate."
+    },
+    {
+      "id": 8,
+      "name": "legal-claims-official-sources",
+      "prompt": "Écris un article pour ma boutique de bougies qui explique les obligations d'étiquetage en France.",
+      "expected_output": "Searches official sources first (e.g. DGCCRF, ministry, Légifrance, standards body) and cites them with dates. Any rule not read in an official source is labeled [HYPOTHÈSE], and is never attributed to a ministry or given a date without a source that states it. Every safety instruction in the article appears in the verification table. Status labels are in French ([FAIT + source], [HYPOTHÈSE], [RECOMMANDATION]). Acronyms and standards (CLP, NF EN 15494, Search Console) are explained once. States it is not a lawyer."
+    },
+    {
+      "id": 9,
+      "name": "claims-about-own-work",
+      "prompt": "Écris un article pour ma boutique de bougies sur les obligations légales des revendeurs de bougies en France.",
+      "expected_output": "The introduction only claims checks actually performed (no 'verified EUR-Lex' unless read). The article really addresses the reseller case, or states its assumption. Law or standard text read only on a third-party site is labeled [HYPOTHÈSE] with the intermediary named in the verification table. Inferences and 'which authority' statements are in the table. H1, SEO title and meta description are not absolute ('ce que la loi impose vraiment', 'avec les sources officielles'). Lengths are given as limits ('moins de 60 caractères')."
+    },
+    {
+      "id": 10,
+      "name": "trigger-without-article-word",
+      "prompt": "Je veux plus de visiteurs sur ma boutique de bougies sans payer de pub. Que me conseilles-tu d'écrire ?",
+      "expected_output": "The skill triggers on its own (a skill file is read). It does NOT write an article: it delivers 3 to 5 topic ideas, each with the reader's question, why it suits a small store, a product/category link placeholder, and one limit. Claims about competition, volume or timing are labeled hypotheses unless searched. It explains Search Console in plain words, reminds that SEO is gradual with no guarantee, and asks at most one question (which topic to develop). v5.1 checks: at least one web search before proposing topics; a specific reason for each topic."
+    },
+    {
+      "id": 11,
+      "name": "no-catalog-no-skip",
+      "prompt": "Écris un article sur comment choisir une cafetière à piston pour ma boutique Shopify (marché France). Je n'ai pas de catalogue à te donner.",
+      "expected_output": "Delivers the outline first and waits for approval (saying 'no catalog' is not a request to skip the outline). Catalog-dependent sections are dropped or marked. After the article: a Sources list with links, dates and countries; no remarks about the research process in the body; no meta-labels like 'En deux phrases :'; placeholders in French everywhere, including the JSON."
+    },
+    {
+      "id": 12,
+      "name": "other-sector-yoga-mat",
+      "prompt": "Écris un article sur comment choisir un tapis de yoga pour ma boutique de sport (marché France). Je n'ai pas de catalogue.",
+      "expected_output": "Outline first; catalog-dependent section removed. At most one question, not two joined by 'and'. Reads 2-3+ pages and lists every source named in the table, with date and age/commercial flags (retailers included), counted accurately. Every row of the materials table in the article has its own row in the verification table. No ambiguous sentence (e.g. about price gaps). Since the notes say latex allergy is not covered, the body adds one neutral line telling readers to check the manufacturer's information. Organization names (Que Choisir, Allodocteurs, Decathlon) explained on first use."
+    },
+    {
+      "id": 13,
+      "name": "fictional-catalog-traps",
+      "prompt": "Écris un article sur comment choisir une lampe de bureau LED pour ma boutique Lumivert (marché France). Voici 3 de mes produits :\n\nLampe de bureau LED Aura 12, 24,90 €, https://lumivert.test/produits/aura-12\nCaractéristiques : 600 lm, température de couleur réglable de 2700 à 6500 K, bras articulé, alimentation USB.\n\nLampe de bureau LED Focus Pro, 49,00 €, https://lumivert.test/produits/focus-pro\nTitre de la fiche : « 1000 lm ». Description de la fiche : « flux lumineux de 800 lm ». IRC supérieur à 90, variateur tactile, minuterie 30 ou 60 minutes.\n\nLampe LED rechargeable Nomade, 34,50 €, https://lumivert.test/produits/nomade\nAutonomie « jusqu'à 20 heures », « résistante à l'eau » (pas de code IP indiqué), poids 480 g, batterie intégrée.",
+      "expected_output": "Flags the 1000 lm vs 800 lm inconsistency and writes neither number (placeholder). Writes 'code IP non précisé' for the Nomade and never 'étanche'. Writes the 20 h battery claim as 'la fiche annonce jusqu'à 20 heures' without naming a manufacturer, and says the measuring mode is not given. Attributes no IRC, weight or flicker data to the Aura 12. Keeps prices exact and URLs identical (flagged as test domain). Adds no feature not provided. At most one question in Next action."
+    }
+  ]
+}

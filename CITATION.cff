@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use or adapt this skill, please cite it as below."
+title: "ecommerce-blog-seo"
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/omarhannachi84-netizen/ecommerce-blog-seo"
+authors:
+  - family-names: "Hannachi"
+    given-names: "Omar"
+abstract: "A Claude skill that helps beginner online store owners write blog articles that can be found on Google and cited by AI assistants, without inventing facts."

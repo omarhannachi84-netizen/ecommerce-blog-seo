@@ -1,8 +1,8 @@
 {
-    "name": "ecommerce-blog-seo",
-    "version": "0.1.0",
-    "description": "Write honest, well-structured e-commerce blog articles, structured to be found on Google and reused by AI assistants. Built for beginner store owners.",
-    "author": { "name": "Hannachi Omar" },
-    "license": "MIT",
-    "keywords": ["seo", "ecommerce", "blog", "shopify", "content"]
+  "name": "ecommerce-blog-seo",
+  "version": "0.1.0",
+  "description": "Write honest, well-structured e-commerce blog articles, structured to be found on Google and reused by AI assistants. Built for beginner store owners.",
+  "author": { "name": "Hannachi Omar" },
+  "license": "MIT",
+  "keywords": ["seo", "ecommerce", "blog", "shopify", "content"]
 }
