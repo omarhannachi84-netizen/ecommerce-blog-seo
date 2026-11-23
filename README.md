@@ -123,7 +123,7 @@ Open an issue on this repository: describe the prompt you used, what you expecte
 
 Created by Hannachi Omar ([github.com/omarhannachi84-netizen](https://github.com/omarhannachi84-netizen)).
 
-If you reuse or adapt this skill, please keep the copyright notice (the MIT license requires it) and link back to this repository. See `CITATION.cff` to cite it.
+If you reuse or adapt this skill, please keep the copyright notice (the MIT license requires it) and link back to this repository. See the LICENSE file for details.
 
 ## License
 
